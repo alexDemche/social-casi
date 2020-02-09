@@ -1,0 +1,41 @@
+@import './utils/utils';
+@import './pages/pages';
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html * {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+  color: #eee;
+  font-size: 1em;
+  line-height: 1.25;
+  background-color: #000;
+}
+
+.wrapper {
+  padding: 0 20px;
+  width: 100%;
+
+  &--flex {
+    flex: 1 0 auto;
+  }
+
+  @include desktop {
+    padding: 0 44px; // fallback
+    padding: 0 2.61vw;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include custom-breakpoint(1920) {
+    padding: 0 44px;
+  }
+}
+

@@ -1,0 +1,34 @@
+/* SMARTPHONES PORTRAIT */
+@mixin smartphone-portrait {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin smartphone-landscape {
+/* SMARTPHONES LANDSCAPE */
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+/* TABLETS PORTRAIT */
+@mixin tablets-portrait {
+  @media screen and (min-width: 768px)  {
+    @content;
+  }
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@mixin desktop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin custom-breakpoint($screen) {
+  @media (min-width: $screen+'px') {
+      @content;
+  }
+}
